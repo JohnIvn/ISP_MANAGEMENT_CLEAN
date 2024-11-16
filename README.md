@@ -22,5 +22,12 @@ npm i bootstrap-icons
 npm install react-router-dom
 
 
+- GITHUB
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/*/**.git
+git push -u origin master
+
 
 
