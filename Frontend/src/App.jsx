@@ -1,9 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css"; 
+import NavBar from "./components/navbar";
 
 function App() {
   return (
-    <div className="container">
+    <div className="container" style={{ margin: 0 }}>
+      <NavBar></NavBar>       
       <h1 className="text-center mt-5">React and Bootstrap Example</h1>
       <div className="row mt-4">
         <div className="col-md-4">
