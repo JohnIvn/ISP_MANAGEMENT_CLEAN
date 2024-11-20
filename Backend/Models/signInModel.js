@@ -1,19 +1,16 @@
-import { Sequelize, DataTypes, Model } from 'sequelize';  // Import necessary parts from Sequelize
-import db from '../database.js';  // Import the Sequelize instance connected to your DB
+import { Sequelize, DataTypes, Model } from 'sequelize';  
+import db from '../database.js';  
 
 class SignInModel extends Model {}
 
 SignInModel.init(
   {
-    userId: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-    },
+
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+      primaryKey: true
     },
     password: {
       type: DataTypes.STRING,

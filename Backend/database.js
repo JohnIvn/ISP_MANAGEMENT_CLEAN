@@ -11,12 +11,12 @@ const db = new Sequelize(
     {
       host: process.env.DB_HOST,
       dialect: 'mysql',
-      logging: false,
+      logging: console.log,
     }
   );
 
 db.authenticate()
   .then(() => console.log('Database connection successful!'))
-  .catch((error) => console.error('Unable to connect to the database:', error));
+  .catch((error) => console.error('Unable to connect to the database.'));
 
 export default db;
