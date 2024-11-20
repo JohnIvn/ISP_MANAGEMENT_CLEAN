@@ -37,11 +37,9 @@ const UserAccount = UserAccountModel.init(
     sequelize: db,
     modelName: 'UserAccount',
     tableName: 'useraccounts',
-    timestamps: false, // You can set this to true if you want timestamps
+    timestamps: false,
   }
 );
-
-// Define AdminAccount Model
 class AdminAccountModel extends Model {}
 
 const AdminAccount = AdminAccountModel.init(
@@ -49,7 +47,6 @@ const AdminAccount = AdminAccountModel.init(
     userId: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true, 
     },
     email: {
       type: DataTypes.STRING,
