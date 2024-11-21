@@ -1,7 +1,6 @@
 import db from '../database.js';
 import { Sequelize, DataTypes, Model } from 'sequelize';
 
-// Define UserAccount Model
 class UserAccountModel extends Model {}
 
 const UserAccount = UserAccountModel.init(

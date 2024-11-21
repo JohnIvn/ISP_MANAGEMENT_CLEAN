@@ -4,7 +4,7 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import signUpRoute from './Routes/signUpRoute.js'
 import signInRoute from './Routes/signInRoute.js'
-import authenticateToken from './authentication.js'
+import homePageRouter from './Routes/homePageRoute.js'
 dotenv.config()
 
 const app = express()
@@ -17,9 +17,8 @@ app.use(express.static('Public'));
 
 app.use('/signin', signInRoute);
 app.use('/signup', signUpRoute);
-app.use('/homepage', authenticateToken, (req, res) => {
-    return res.status(200).json({message: 'you are authenticated'});
-});
+app.use('/homepage', homePageRouter);
+
 
 
 app.listen(process.env.PORT, () => {
