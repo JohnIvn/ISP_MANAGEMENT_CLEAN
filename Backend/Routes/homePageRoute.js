@@ -5,11 +5,11 @@ const router = express.Router();
 
 router.get('/', authenticateToken, (req, res) => {
 
-    const { userId, firstName, lastName, email } = req.user;
+    const { firstName, lastName, email } = req.user;
 
     return res.status(200).json({
-        message: 'You are authenticated',
-        user: { userId, firstName, lastName, email },
+        message: `You are authenticated, ${firstName}`,
+        user: { firstName, lastName, email },
     });
     
 });
