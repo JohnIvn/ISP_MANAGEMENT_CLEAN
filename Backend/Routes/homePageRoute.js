@@ -8,7 +8,7 @@ router.get('/', authenticateToken, (req, res) => {
     const { firstName, lastName, email } = req.user;
 
     return res.status(200).json({
-        message: `You are authenticated, ${firstName}`,
+        message: `You are authenticated, ${firstName}  ${lastName}`,
         user: { firstName, lastName, email },
     });
     
