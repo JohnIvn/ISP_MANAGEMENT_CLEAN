@@ -1,9 +1,9 @@
 import { Sequelize, DataTypes, Model } from "sequelize";
 import db from '../database.js'
 
-class subscription extends Model {}
+class subscriptionModel extends Model {}
 
-export const  subscription  = subscription.init({
+   export const subscription = subscriptionModel.init({
     userid: {
         type: DataTypes.INTEGER,
         primaryKey: true

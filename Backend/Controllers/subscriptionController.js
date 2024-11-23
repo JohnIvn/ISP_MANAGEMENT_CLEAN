@@ -1,7 +1,7 @@
 import { subscription } from "../Models/subscriptionModel.js";
 import db from '../database.js';
-// tite 
-export const subscribe = async (req, res) => {
+
+export const subscriptionController = async (req, res) => {
     const { userId, email, plan } = req.body;
 
     try {
